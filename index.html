@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <script src="JavaScripts/Functions.js"></script>
+    <link rel="icon" type="x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <div class="box">
+        <h2>想看?</h2>
+
+        <div class="input-box">
+            <label>账号</label>
+            <input type="text" placeholder="是哪个小可爱呢?" id="username"/>
+        </div>
+        <div class="input-box">
+            <label>密码</label>
+            <input type="password" placeholder="小心输入哦~" id="password"/>
+        </div>
+
+        <div class="btn-box">
+            <a href="#">忘记密码?</a>
+            <div>
+                <!--window.open('universe.html')-->
+                <button onclick="login()">登录</button>
+                <button onclick="alert('你也配?(你没有权限!)')">注册</button>
+            </div>
+        </div>
+    </div>
+</body>
