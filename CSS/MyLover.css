@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*全局属性*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+    caret-color: transparent;/* 隐藏光标 */
+}
+
+body {
+    background-color: #faead3;
+}
+
+h2 {
+    color: #4c6474;
+    margin: 10px 20px;
+}
+
+/**/
+#Portrait {
+    height: 100px;
+    width: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+#Portrait img {
+    width: 100%;
+}
+
+#says img {
+    margin-left: 50px;
+    width: 80%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* 悬浮窗 */
+.content {
+    display: none;
+    background-color: #94dbff9a;
+    z-index: 1002; /*z轴 即悬浮*/
+    
+    position: absolute; /*位置及大小*/
+    top: 10%;
+    left: 25%;
+    width: 55%;
+    height: 55%;
+    
+    border: 20px solid #5201314a;
+    border-radius: 10px;
+    padding: 10px;
+}
+.content img {
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 8px;
+}

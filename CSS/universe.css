@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/*全局属性*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS";
+    color: #4c6474;
+}
+
+html {
+    background-color: #d9d9d9;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*Tab栏实现部分*/
+#head {
+    text-align: center;
+}
+
+#leader ul {
+    float: center;
+    list-style-type: none;
+    background-color: #9bb8ca;
+}
+
+#leader li a:hover {
+    background-color: #adbec6;
+}
+
+#leader li {
+    float: left;
+    list-style: none;
+}
+
+#leader li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px 8px;
+}
+
+/*Tab栏内容部分*/
+#Log,
+#Diary,
+#Support {
+    margin: 0 20%;
+}
+
+#Log {
+    display: block;
+}
+
+#Diary {
+    display: none;
+}
+
+#Support {
+    display: none;
+}
+
+/*其他*/
+#Support {
+    margin: 0;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
