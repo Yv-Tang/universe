@@ -8,6 +8,12 @@
     box-sizing: border-box;
     font-family: "Comic Sans MS";
     color: #4c6474;
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html {
@@ -22,35 +28,56 @@ a {
     text-decoration: none;
 }
 
+
+
 /*Tab栏实现部分*/
+
 #head {
     text-align: center;
+    display: grid;
 }
 
-#leader ul {
-    float: center;
-    list-style-type: none;
-    background-color: #9bb8ca;
+/* 按钮效果 */
+#head .button {
+    text-align: left;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px;
+    padding-right: 20px;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease-in;
 }
 
-#leader li a:hover {
-    background-color: #adbec6;
+#head .button:hover {
+    width: auto;
 }
 
-#leader li {
-    float: left;
-    list-style: none;
-}
-
-#leader li a {
-    display: block;
-    color: white;
+/* 图标 */
+#head .button .icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
     text-align: center;
-    text-decoration: none;
-    padding: 8px 8px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    line-height: 40px;
+    transition: all 0.5s ease-out;
 }
+
+#head .button:hover .icon {
+    background-color: #000000;
+    color: #fff;
+}
+
+
 
 /*Tab栏内容部分*/
+
 #Log,
 #Diary,
 #Support {
@@ -69,10 +96,21 @@ a {
     display: none;
 }
 
+
+
 /*其他*/
+
+#leader {
+    margin-top: 10px;
+}
+
 #Support {
     margin: 0;
     text-align: center;
+}
+
+#body {
+    transition: all 0.1s ease-out;
 }
 
 img {
