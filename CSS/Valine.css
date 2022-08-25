@@ -1,0 +1,21 @@
+#Issue {
+    background-color: #ffffff;
+    padding: 5%;
+}
+
+.v[data-class=v] .vpanel {
+    background-color: #fff3e37f;
+    border-radius: 10px;
+}
+
+.v[data-class=v] .vwrap {
+    border-radius: 10px;
+}
+
+.v[data-class=v] .vwrap .vheader .vinput {
+    background-color: #dedede50;
+    width: 30%;
+    border-bottom: 2px #dedede dashed;
+    border-radius: 10px;
+    margin-right: 2%;
+}
