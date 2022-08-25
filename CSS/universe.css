@@ -100,6 +100,38 @@ a {
 
 
 
+/* 页脚 */
+footer {
+    height: auto;
+    margin-top: 100px;
+    display: grid;
+    background-color: #00ffd510;
+    text-align: center;
+    FONT-WEIGHT: 100;
+}
+
+#sub {
+    margin: 5%;
+}
+
+.a,
+.touch,
+.other {
+    float: left;
+    height: 100%;
+    width: 30%;
+}
+
+.a a {
+    font-size: 20px;
+}
+.a a img {
+    float: center;
+    height: 15px;
+    width: 15px;
+}
+
+
 /*其他*/
 
 #leader {
