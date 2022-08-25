@@ -17,7 +17,7 @@ function Tab(TabName) {
         case "Log": _log = "block";
         //console.log("way1",_log,_diary,_support);
             break;
-        case "Diary": _diary = "block";
+        case "Diary": _diary = "none";alert("你没有权限");
         //console.log("way2",_log,_diary,_support);
             break;
         case "Support": _support = "block";
@@ -30,8 +30,22 @@ function Tab(TabName) {
 
     //实现
     Log.style.display = _log;
-    Diary.style.display = _diary;
+    //Diary.style.display = _diary;
     Support.style.display = _support;
     Issue.style.display = _issue;
         //console.log("swich",_log,_diary,_support,_issue)
+}
+
+function dia(){
+    var Log = document.getElementById("Log");
+    var Diary = document.getElementById("Diary");
+    var Support = document.getElementById("Support");
+    var Issue = document.getElementById("Issue");
+
+    Diary.style.display = "block";
+    
+    Log.style.display = "none";
+    Support.style.display = "none";
+    Issue.style.display = "none";
+
 }
