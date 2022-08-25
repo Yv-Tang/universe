@@ -1,0 +1,37 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "31409254",
+      "name": "file-text-fill",
+      "font_class": "file-text-fill",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "31409261",
+      "name": "calendar-check-fill",
+      "font_class": "calendar-check-fill",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "31421670",
+      "name": "消息1",
+      "font_class": "xiaoxi1",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "31425446",
+      "name": "点赞",
+      "font_class": "dianzan",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    }
+  ]
+}

@@ -7,6 +7,10 @@
     <link rel="icon" type="x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="imports/iconfont.css">
     <link rel="stylesheet" href="CSS/universe.css">
+
+    <!-- Valine -->
+    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
     <script src="JavaScripts/universe.js"></script>
 </head>
 
@@ -34,6 +38,12 @@
                     <span class="iconfont icon-dianzan"></span>
                 </div>
                 <span>Support</span>
+            </div>
+            <div class="button" onclick="Tab('Issue')">
+                <div class="icon">
+                    <span class="iconfont icon-xiaoxi1"></span>
+                </div>
+                <span>Issue</span>
             </div>
         </div>
     </div>
@@ -118,7 +128,17 @@
         <div id="Support">
             <img src="images/weixin.webp" alt="我的支付码!?">
         </div>
-
+        <div id="Issue">
+            <div id="vcomments"></div>
+            <script>
+                new Valine({
+                    el: '#vcomments',
+                    appId: 'kSDqVFRjBHrwXqvwTXN8WM7b-gzGzoHsz',
+                    appKey: 'mX6hrQ3f4nxt8mSp3B1pp3BO',
+                    placeholder: "尽情表白吧!"
+                })
+            </script>
+        </div>
     </div>
     <!-- 尾部 -->
     <footer>
@@ -127,18 +147,19 @@
                 <h3 style="text-align: left;margin-left: 20%;">链接</h3>
                 <a href="https://www.runoob.com"><img src="https://static.runoob.com/images/favicon.ico">菜鸟教程</a><br>
                 <a href="https://www.bilibili.com"><img src="https://www.bilibili.com/favicon.ico?v=1">BiliBili</a><br>
-                <a href="https://github.com/Ronguniverse/"><img src="https://github.githubassets.com/favicons/favicon.svg">Github</a><br>
+                <a href="https://github.com/Ronguniverse/"><img
+                        src="https://github.githubassets.com/favicons/favicon.svg">Github</a><br>
                 <a href="https://www.csdn.net/"><img src="https://g.csdnimg.cn/static/logo/favicon32.ico">CSDN</a>
             </div>
             <div class="touch">
                 <h3 style="text-align: left;margin-left: 20%;">关于</h3>
                 <a href="">QQ:略</a><br>
                 <a href="https://space.bilibili.com/414852496?spm_id_from=333.1007.0.0">B站</a><br>
-                
+
             </div>
             <div class="other">
                 <h3 style="text-align: left;margin-left: 20%;">其他</h3>
-                <p>Other</p>
+                <a href="https://console.leancloud.cn/apps/kSDqVFRjBHrwXqvwTXN8WM7b-gzGzoHsz/storage/data/Comment">评论管理</a>
             </div>
         </div>
     </footer>

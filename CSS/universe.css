@@ -36,7 +36,6 @@ a {
     text-align: center;
     display: grid;
 }
-
 /* 按钮效果 */
 #head .button {
     text-align: left;
@@ -95,6 +94,10 @@ a {
 }
 
 #Support {
+    display: none;
+}
+
+#Issue {
     display: none;
 }
 

@@ -3,11 +3,13 @@ function Tab(TabName) {
     var Log = document.getElementById("Log");
     var Diary = document.getElementById("Diary");
     var Support = document.getElementById("Support");
+    var Issue = document.getElementById("Issue");
 
     //定义值
     var _log = "none";
     var _diary = "none";
     var _support = "none";
+    var _issue = "none";
         //console.log("var",_log,_diary,_support)
 
     //传参
@@ -21,11 +23,15 @@ function Tab(TabName) {
         case "Support": _support = "block";
         //console.log("way3",_log,_diary,_support);
             break;
+        case "Issue": _issue = "block";
+        //console.log("way4",_log,_diary,_support);
+            break;
     }
 
     //实现
     Log.style.display = _log;
     Diary.style.display = _diary;
     Support.style.display = _support;
-        //console.log("swich",_log,_diary,_support)
+    Issue.style.display = _issue;
+        //console.log("swich",_log,_diary,_support,_issue)
 }
