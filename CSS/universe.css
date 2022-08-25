@@ -78,10 +78,12 @@ a {
 
 /*Tab栏内容部分*/
 
-#Log,
-#Diary,
-#Support {
+#body {
     margin: 0 20%;
+    padding: 20px;
+    background-color: #fbf1e4;
+    border-radius: 20px;
+    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
 }
 
 #Log {

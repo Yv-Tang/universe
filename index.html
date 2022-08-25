@@ -1,34 +1,127 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>登录</title>
-    <link rel="stylesheet" href="CSS/index.css" />
-    <script src="JavaScripts/Functions.js"></script>
+    <meta charset="utf-8">
+    <title>universe</title>
     <link rel="icon" type="x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="imports/iconfont.css">
+    <link rel="stylesheet" href="CSS/universe.css">
+    <script src="JavaScripts/universe.js"></script>
 </head>
 
 <body>
-    <div class="box">
-        <h2>想看?</h2>
 
-        <div class="input-box">
-            <label>账号</label>
-            <input type="text" placeholder="是哪个小可爱呢?" id="username"/>
-        </div>
-        <div class="input-box">
-            <label>密码</label>
-            <input type="password" placeholder="小心输入哦~" id="password"/>
-        </div>
-
-        <div class="btn-box">
-            <a href="#">忘记密码?</a>
-            <div>
-                <!--window.open('universe.html')-->
-                <button onclick="login()">登录</button>
-                <button onclick="alert('你也配?(你没有权限!)')">注册</button>
+    <!--头-->
+    <div id="head">
+        <h1>universe</h1>
+        <hr>
+        <div id="leader">
+            <div class="button" onclick="Tab('Log')">
+                <div class="icon">
+                    <span class="iconfont icon-file-text-fill"></span>
+                </div>
+                <span>Log</span>
+            </div>
+            <div class="button" onclick="Tab('Diary')">
+                <div class="icon">
+                    <span class="iconfont icon-calendar-check-fill"></span>
+                </div>
+                <span>Diary</span>
+            </div>
+            <div class="button" onclick="Tab('Support')">
+                <div class="icon">
+                    <span class="iconfont icon-dianzan"></span>
+                </div>
+                <span>Support</span>
             </div>
         </div>
     </div>
+    <!--主体-->
+    <div id="body">
+        <!--Tab栏-->
+        <div id="Log">
+            <h2>网页日志</h2>
+
+            <h2>2022</h2>
+            <div>
+                <h3>6.11</h3>
+                <p>网页大体制作完成</p>
+            </div>
+
+            <div>
+                <h3>6.12</h3>
+                <p>添加登录界面(无作用)并使用了第一个css样式表</p>
+                <p>添加头部图标</p>
+            </div>
+
+            <div>
+                <h3>6.13</h3>
+                <p>可以登录了!</p>
+            </div>
+
+            <div>
+                <h3>6.14</h3>
+                <p>新增导航栏</p>
+            </div>
+            <div>
+                <h3>7.9</h3>
+                <p>使用了Git,换了个储存库</p>
+            </div>
+            <div>
+                <h3>8.12</h3>
+                <p>删除头部图标</p>
+            </div>
+            <div>
+                <h3>8.17</h3>
+                <p>重置Tab栏</p>
+            </div>
+            <div>
+                <h3>8.24</h3>
+                <p>再次重置Tab栏为风琴样式</p>
+            </div>
+            
+<!--
+            <div>
+                <h3>日期</h3>
+                <p>文本</p>
+            </div>
+-->
+        </div>
+        <div id="Diary">
+            <h2>我的日志</h2>
+
+            <h2>2022</h2>
+            <div>
+                <h3>8.11</h3>
+                <p>原本就罕有的友谊,凭什么不珍惜?</p>
+            </div>
+            <div>
+                <h3>8.16</h3>
+                <p>不想是过客的拥挤,只想是你的唯一</p>
+            </div>
+            <div>
+            <h3>8.19 L.</h3>
+            <p>朋友以上,<a href="MyLover.html">恋人</a>已满.</p>
+            </div>
+            <div>
+            <h3>8.21</h3>
+            <p>《恋爱二进制》</p>
+            </div>
+            <!--
+            <div>
+            <h3>日期</h3>
+            <p>文本</p>
+            </div>
+-->
+        </div>
+        <div id="Support">
+            <img src="images/weixin.webp" alt="我的支付码!?">
+        </div>
+
+    </div>
+
 </body>
+
+
+</html>
