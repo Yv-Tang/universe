@@ -150,6 +150,16 @@ footer {
     transition: all 0.1s ease-out;
 }
 
+#clue {
+    margin-left: 2%;
+    margin-bottom: 2%;
+    padding-left: 1%;
+    height: auto;
+    width: 80%;
+    border: 2px #dedede dashed;
+    border-radius: 8px;
+}
+
 img {
     width: 50%;
     height: 50%;
