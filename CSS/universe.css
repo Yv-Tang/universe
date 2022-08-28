@@ -4,6 +4,16 @@
     font-family: "Comic Sans MS";
 }
 
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #fff;
+}
+
 /* 顶部栏 */
 .Top {
     /* 固定 */
@@ -13,15 +23,17 @@
     width: 100%;
     height: 50px;
     line-height: 50px;
-    font-size: 25px;
 
-    /* 毛玻璃
-     backdrop-filter: blur(10px); */
+
+    /* 毛玻璃 backdrop-filter: blur(10px); */
+    color: #fff;
 }
 
 .logo {
     width: 100px;
     margin: 0 25px;
+
+    font-size: 25px;
 
     float: left;
     /* 修改指针 */
@@ -31,9 +43,77 @@
     /* 不可选中 */
     user-select: none;
 }
+
 .logo:hover {
-    filter: drop-shadow(0 0 10px white);
+    filter: drop-shadow(0 0 10px #fff);
 }
+
 .logo:active {
+    filter: none;
+}
+
+/* Github */
+.github {
+    width: auto;
+    margin: 7px 25px;
+
+    float: right;
+    /* 修改指针 */
+    cursor: pointer;
+    /* 隐藏光标 */
+    caret-color: transparent;
+    /* 不可选中 */
+    user-select: none;
+}
+
+.github:hover {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.github:active {
+    filter: none;
+}
+
+/* 消息 */
+.comment {
+    width: auto;
+    margin: 7px 25px;
+
+    float: right;
+    /* 修改指针 */
+    cursor: pointer;
+    /* 隐藏光标 */
+    caret-color: transparent;
+    /* 不可选中 */
+    user-select: none;
+}
+
+.comment:hover {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.comment:active {
+    filter: none;
+}
+
+/* 链接 */
+.link {
+    width: auto;
+    margin: 7px 25px;
+
+    float: right;
+    /* 修改指针 */
+    cursor: pointer;
+    /* 隐藏光标 */
+    caret-color: transparent;
+    /* 不可选中 */
+    user-select: none;
+}
+
+.link:hover {
+    filter: drop-shadow(0 0 10px #fff);
+}
+
+.link:active {
     filter: none;
 }
