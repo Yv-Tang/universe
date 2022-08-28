@@ -1,166 +1,39 @@
-@charset "utf-8";
-
-/*全局属性*/
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: "Comic Sans MS";
-    color: #4c6474;
+}
 
+/* 顶部栏 */
+.Top {
+    /* 固定 */
+    position: fixed;
+    top: 0;
 
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+
+    /* 毛玻璃
+     backdrop-filter: blur(10px); */
+}
+
+.logo {
+    width: 100px;
+    margin: 0 25px;
+
+    float: left;
+    /* 修改指针 */
+    cursor: pointer;
+    /* 隐藏光标 */
+    caret-color: transparent;
+    /* 不可选中 */
     user-select: none;
 }
-
-html {
-    background-color: #d9d9d9;
+.logo:hover {
+    filter: drop-shadow(0 0 10px white);
 }
-
-h1 {
-    font-size: 2.5em;
-}
-
-a {
-    text-decoration: none;
-}
-
-
-
-/*Tab栏实现部分*/
-
-#head {
-    text-align: center;
-    display: grid;
-}
-/* 按钮效果 */
-#head .button {
-    text-align: left;
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    margin: 0 5px;
-    padding-right: 20px;
-    overflow: hidden;
-    background: #ffffff;
-    border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0px 10px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease-in;
-}
-
-#head .button:hover {
-    width: auto;
-}
-
-/* 图标 */
-#head .button .icon {
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    border-radius: 10px;
-    box-sizing: border-box;
-    line-height: 40px;
-    transition: all 0.5s ease-out;
-}
-
-#head .button:hover .icon {
-    background-color: #000000;
-    color: #fff;
-}
-
-
-
-/*Tab栏内容部分*/
-
-#body {
-    margin: 0 20%;
-    padding: 20px;
-    background-color: #fbf1e4;
-    border-radius: 20px;
-    box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.2);
-}
-
-#Log {
-    display: block;
-}
-
-#Diary {
-    display: none;
-}
-
-#Support {
-    display: none;
-}
-
-#Issue {
-    display: none;
-}
-
-
-
-/* 页脚 */
-footer {
-    height: auto;
-    margin-top: 100px;
-    display: grid;
-    background-color: #00ffd510;
-    text-align: center;
-    FONT-WEIGHT: 100;
-}
-
-#sub {
-    margin: 5%;
-}
-
-.a,
-.touch,
-.other {
-    float: left;
-    height: 100%;
-    width: 30%;
-}
-
-.a a {
-    font-size: 20px;
-}
-.a a img {
-    float: center;
-    height: 15px;
-    width: 15px;
-}
-
-
-/*其他*/
-
-#leader {
-    margin-top: 10px;
-}
-
-#Support {
-    margin: 0;
-    text-align: center;
-}
-
-#body {
-    transition: all 0.1s ease-out;
-}
-
-#clue {
-    margin-left: 2%;
-    margin-bottom: 2%;
-    padding-left: 1%;
-    height: auto;
-    width: 80%;
-    border: 2px #dedede dashed;
-    border-radius: 8px;
-}
-
-img {
-    width: 50%;
-    height: 50%;
+.logo:active {
+    filter: none;
 }
