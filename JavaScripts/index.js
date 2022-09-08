@@ -10,21 +10,21 @@ function Tab(TabName) {
     var _diary = "none";
     var _support = "none";
     var _issue = "none";
-        //console.log("var",_log,_diary,_support)
+    //console.log("var",_log,_diary,_support)
 
     //传参
     switch (TabName) {
         case "Log": _log = "block";
-        //console.log("way1",_log,_diary,_support);
+            //console.log("way1",_log,_diary,_support);
             break;
-        case "Diary": _diary = "none";alert("你没有权限");
-        //console.log("way2",_log,_diary,_support);
+        case "Diary": _diary = "none"; alert("你没有权限");
+            //console.log("way2",_log,_diary,_support);
             break;
         case "Support": _support = "block";
-        //console.log("way3",_log,_diary,_support);
+            //console.log("way3",_log,_diary,_support);
             break;
         case "Issue": _issue = "block";
-        //console.log("way4",_log,_diary,_support);
+            //console.log("way4",_log,_diary,_support);
             break;
     }
 
@@ -33,19 +33,35 @@ function Tab(TabName) {
     //Diary.style.display = _diary;
     Support.style.display = _support;
     Issue.style.display = _issue;
-        //console.log("swich",_log,_diary,_support,_issue)
+    //console.log("swich",_log,_diary,_support,_issue)
 }
 
-function dia(){
+function dia() {
     var Log = document.getElementById("Log");
     var Diary = document.getElementById("Diary");
     var Support = document.getElementById("Support");
     var Issue = document.getElementById("Issue");
 
     Diary.style.display = "block";
-    
+
     Log.style.display = "none";
     Support.style.display = "none";
     Issue.style.display = "none";
 
 }
+
+
+
+function Click() {
+
+    alert('此界面禁止调试');
+
+    window.event.returnValue = false;
+
+}
+
+document.oncontextmenu = Click;
+
+var element = new Image();
+Object.defineProperty(element, 'id', { get: function () { window.location.href = "https://www.baidu.com" } });
+console.log(element);
