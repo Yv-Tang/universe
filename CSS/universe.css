@@ -4,6 +4,12 @@
     font-family: "Comic Sans MS";
 }
 
+/* 鼠标 */
+* {
+    cursor: url(""),auto;
+}
+
+
 #vcomments {
     padding-top: 0px 10%;
     padding: 100px;
