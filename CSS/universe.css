@@ -6,6 +6,12 @@
     font-family: 'Itim', cursive
 }
 
+/* 鼠标 */
+* {
+    cursor: url(""),auto;
+}
+
+
 #vcomments {
     padding-top: 0px 10%;
     padding: 100px;
