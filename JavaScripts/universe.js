@@ -2,36 +2,35 @@ window.onload = function () {
 
     var text = document.getElementById("text");
 
-    var contentArr = "Wait for you.".split("");
+    var aim = "Wait for you.";
 
-    var content = "";
+    var contentArr = aim.split(""); // 目标语句形成的数组[13]
 
-    var index = 0;
+    var contentWord = aim.split(" ");
 
-    var ID = setInterval(typing(), 100);
+    var content = ""; // 展示
+
+    var IsTyping = true;
+
+    setInterval(typing(), 150);
 
     function typing() {
         return function () {
+            if (content.length < contentArr.length) { //输入
 
-            content += contentArr[index];
+                content += contentArr[content.length];
 
-            text.innerHTML = content + "_";
-
-            index++;
-
-            if (contentArr[index] == " ") {
+                text.innerHTML = content + "_";
+                //直到输入完成 content == "aim"
             }
-
-            if (index === contentArr.length) {
+            else if (content.length === contentArr.length) {
 
                 text.innerHTML = content;
 
-                clearInterval(ID);
-
-                console.log("结束了");
+                clearInterval();
 
             }
-            // console.log(content, index);
+            // console.log(content, content.length, "("+contentArr[content.length]+")", IsTyping);
         }
     };
 
@@ -40,7 +39,7 @@ window.onload = function () {
 function ToUrl(url) {
     switch (url) {
         case 'universe':
-            window.open("universe.html","_self");
+            window.open("universe.html", "_self");
             break;
         case 'Github':
             window.open('https://github.com/Ronguniverse/universe');
