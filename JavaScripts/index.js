@@ -30,7 +30,7 @@ function Tab(TabName) {
 
     //实现
     Log.style.display = _log;
-    //Diary.style.display = _diary;
+    Diary.style.display = _diary;
     Support.style.display = _support;
     Issue.style.display = _issue;
     //console.log("swich",_log,_diary,_support,_issue)
