@@ -112,7 +112,7 @@
                 <h3>9.30</h3>
                 <p>重置文件结构</p>
             </div>
-            
+
             <!--
             <div>
                 <h3>日期</h3>
@@ -149,12 +149,25 @@
                 <p>她开学了</p>
             </div>
             <div>
-            <h3>9.6</h3>
-            <p>没有话题</p>
+                <h3>9.6</h3>
+                <p>没有话题</p>
             </div>
             <div>
-            <h3>9.7</h3>
-            <p>或许原本就不是一路人</p>
+                <h3>9.7</h3>
+                <p>曾经,一开始就不是同路人</p>
+            </div>
+            <div>
+                <h3>10.21</h3>
+                <p>总会有人主动,无论最终如何</p>
+            </div>
+            <div>
+                <h3>11.4</h3>
+                <p>相遇是缘
+                    <br>所以我们在一起
+                    <br>纠缠是缘
+                    <br>所以我们没有在一起
+                    <br>或许,缘分还没到吧
+                </p>
             </div>
             <!--
             <div>
@@ -240,6 +253,32 @@
             </div>
         </div>
 
+        <script>
+            function myTime() {
+                let time = new Date();
+                let hh = time.getHours();  //时
+                let mm = time.getMinutes();  //分
+                let ss = time.getSeconds();  //秒
+                // Math.floor() 向下取整
+                document.getElementById("1").innerText = Math.floor(hh / 10);
+                document.getElementById("2").innerText = hh % 10;
+                document.getElementById("4").innerText = Math.floor(mm / 10);
+                document.getElementById("5").innerText = mm % 10;
+                document.getElementById("7").innerText = Math.floor(ss / 10);
+                document.getElementById("8").innerText = ss % 10;
+            }
+            setInterval(myTime, 1000);
+        </script>
+        <div class="clock">
+            <p id="1">0</p>
+            <p id="2">0</p>
+            <p id="3">:</p>
+            <p id="4">0</p>
+            <p id="5">0</p>
+            <p id="6">:</p>
+            <p id="7">0</p>
+            <p id="8">0</p>
+        </div>
 
     </footer>
 
