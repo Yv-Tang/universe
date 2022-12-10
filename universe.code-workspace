@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../uni"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "universe"
+	}
+}
