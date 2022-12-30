@@ -111,11 +111,12 @@ footer {
     display: grid;
     background-color: #00ffd510;
     text-align: center;
-    FONT-WEIGHT: 100;
+    font-weight: 100;
 }
 
 #sub {
     margin: 5%;
+    margin-bottom: 1%;
 }
 
 .a,
@@ -136,6 +137,12 @@ footer {
     width: 15px;
 }
 
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
 
 /*其他*/
 

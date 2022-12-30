@@ -51,12 +51,14 @@ function dia() {
 }
 
 
-
+var debugging = true;
 function Click() {
+    if (!debugging) {
+        alert('此界面禁止调试');
 
-    alert('此界面禁止调试');
+        window.event.returnValue = false;
 
-    window.event.returnValue = false;
+    }
 
 }
 
