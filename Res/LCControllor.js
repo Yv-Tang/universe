@@ -1,14 +1,18 @@
-// 声明 class
+// 声明 class Comment
 const Comment = AV.Object.extend('Comment');
-// 构建对象
+// 构建对象 comment
 const comment = new Comment();
 
+/**
+ * 发布内容
+ */
 function issue() {
-    //定义
+
+    // 绑定变量
     var uName = $('name').value;//暂定
     var uContent = $('content').value;
 
-    // 为属性赋值
+    // 为comment对象属性进行赋值
     comment.set('name', uName);
     comment.set('content', uContent);
 
@@ -22,6 +26,9 @@ function issue() {
     });
 }
 
+/**
+ * @param {number} todays - 查询时间
+ */
 function getComments(todays) {
     var todays = 7;
     //起始时间
@@ -35,7 +42,10 @@ function getComments(todays) {
     console.log(query[1]);
 };
 
-//元素选择器
+/**
+ * 元素选择器
+ * @param {string} Nid - ID名
+ */
 function $(Nid) {
     return document.getElementById(Nid);
 }
