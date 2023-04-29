@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Backend.css">
     <script src="/node_modules/leancloud-storage/dist/av-min.js"></script>
     <script>
         const { Query, User } = AV;
@@ -15,11 +17,38 @@
         console.log(window.AV);
     </script>
     <script src="LCControllor.js"></script>
-        <title>My Commits</title>
+    <title>My Comments</title>
 </head>
+
 <body>
-    <input type="text" placeholder="名称&QQ账号" id="name"><br>
-    <input type="text" placeholder="内容" id="content"><br>
-    <button onclick="issue()">发布</button>
+
+    <div id="inputter">
+        <input type="text" placeholder="名称&QQ账号" id="name"><br>
+        <input type="text" placeholder="内容" id="content"><br>
+        <button onclick="issue()">发布</button>
+        <video controls="controls" loop="loop">
+            <source src="movie.mp4" type="video/mp4">
+        </video>
+    </div>
+    <p>///////////////////////////////////////</p>
+    <div id="outputter">
+        <div>
+            <button onclick="getComments(7)">获取</button>
+            <p id="1">text</p>
+        </div>
+    </div>
+    <div id="0" class="comment-box">
+        <div id="0">
+            <div class="head-box">
+                <img id="_portrait" src="//q.qlogo.cn/g?b=qq&nk=168766779&s=100">
+                <span id="_name">verse<br></span>
+                <span id="_time">2023-01-26 23:32:27</span>
+            </div>
+            <div class="body-box">
+                <div id="_content">实例内容text</div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -1,13 +1,12 @@
-// 声明 class Comment
-const Comment = AV.Object.extend('Comment');
-// 构建对象 comment
-const comment = new Comment();
+// 初始化实例对象comment
+const comment = new AV.Object('Comment');
+// 初始化实例query
+const query = new AV.Query('Comment');
 
 /**
  * 发布内容
  */
 function issue() {
-
     // 绑定变量
     var uName = $('name').value;//暂定
     var uContent = $('content').value;
@@ -30,18 +29,15 @@ function issue() {
  * @param {number} todays - 查询时间
  */
 function getComments(todays) {
-    var todays = 7;
-    //起始时间
-    const startDateQuery = new AV.Query('comment');
-    startDateQuery.greaterThanOrEqualTo('createdAt', new Date());
-    //结束时间
-    const endDateQuery = new AV.Query('comment');
-    endDateQuery.lessThan('createdAt', new Date - todays * 24 * 60 * 60 * 1000)
-    //获取之间的内容
-    const query = AV.Query.and(startDateQuery, endDateQuery);
-    console.log(query[1]);
+    var days = todays;
+    query.descending('createdAt'); // 较晚发布的在上
+    query.find().then((res) => {
+        console.log(res[0].toJSON());
+        $(1).innerText = res[0].get('content');
+    });
 };
 
+//===========================================================================
 /**
  * 元素选择器
  * @param {string} Nid - ID名

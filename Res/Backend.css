@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#inputter {
+    background-color: antiquewhite;
+}
+
+#outputter {
+    border-color: black;
+    border-style: dashed;
+    background-color: #eaeaea;
+    color: rgb(107, 107, 107);
+}
+
+/* 留言展示框 */
+.comment-box {
+    margin: 0.5vh 5%;
+    background-color: #ffeeee;
+    border: solid 0.05vw #c3c3c3;
+    border-radius: 6px;
+    font-size: 3vw;
+}
+
+/* 头 */
+.head-box {
+    color:#00000060;
+    line-height: 5vw;
+}
+
+.head-box img {
+    width: 8vw;
+    height: fit-content;
+    border-radius: 4vw;
+    float: left;
+    margin: 1vw;
+}
+/* 内容 */
+.body-box {
+    margin: 1.2vw;
+}
