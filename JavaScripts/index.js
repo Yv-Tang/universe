@@ -1,55 +1,33 @@
 function Tab(TabName) {
-    //获取对象
-    var Log = document.getElementById("Log");
-    var Diary = document.getElementById("Diary");
-    var Support = document.getElementById("Support");
-    var Issue = document.getElementById("Issue");
-
-    //定义值
-    var _log = "none";
-    var _diary = "none";
-    var _support = "none";
-    var _issue = "none";
-    //console.log("var",_log,_diary,_support)
-
-    //传参
+    var elements = { "Log": "none", "Diary": "none", "Support": "none", "Issue": "none" };
     switch (TabName) {
-        case "Log": _log = "block";
-            //console.log("way1",_log,_diary,_support);
+        case "Log":
+            elements.Log = "block";
             break;
-        case "Diary": _diary = "none"; alert("你没有权限");
-            //console.log("way2",_log,_diary,_support);
+        case "Diary":
+            alert("你没有权限");
             break;
-        case "Support": _support = "block";
-            //console.log("way3",_log,_diary,_support);
+        case "Support":
+            elements.Support = "block";
             break;
-        case "Issue": _issue = "block";
-            //console.log("way4",_log,_diary,_support);
+        case "Issue":
+            elements.Issue = "block";
             break;
     }
-
-    //实现
-    Log.style.display = _log;
-    Diary.style.display = _diary;
-    Support.style.display = _support;
-    Issue.style.display = _issue;
-    //console.log("swich",_log,_diary,_support,_issue)
+    for (var key in elements) {
+        if (elements.hasOwnProperty(key)) {
+            document.getElementById(key).style.display = elements[key];
+        }
+    }
 }
 
 function dia() {
-    var Log = document.getElementById("Log");
-    var Diary = document.getElementById("Diary");
-    var Support = document.getElementById("Support");
-    var Issue = document.getElementById("Issue");
-
-    Diary.style.display = "block";
-
-    Log.style.display = "none";
-    Support.style.display = "none";
-    Issue.style.display = "none";
-
+    var elements = document.querySelectorAll("#Log, #Diary, #Support, #Issue");
+    elements.forEach(function (element) {
+        element.style.display = "none";
+    });
+    document.getElementById("Diary").style.display = "block";
 }
-
 
 var debugging = true;
 function Click() {

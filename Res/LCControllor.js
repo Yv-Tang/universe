@@ -3,8 +3,12 @@ const comment = new AV.Object('Comment');
 // 初始化实例query
 const query = new AV.Query('Comment');
 
+
+
+
+
 /**
- * 发布内容
+ * 发布issue
  */
 function issue() {
     // 绑定变量
@@ -25,23 +29,37 @@ function issue() {
     });
 }
 
+
 /**
- * @param {number} todays - 查询时间
+ * @param {number} todays - 截止时间
  */
 function getComments(todays) {
     var days = todays;
     query.descending('createdAt'); // 较晚发布的在上
     query.find().then((res) => {
-        console.log(res[0].toJSON());
-        $(1).innerText = res[0].get('content');
+        //元素
+        for (var key in res) {
+            var portrait = "//q.qlogo.cn/g?b=qq&nk=" + res[key].name + "&s=100"
+        }
+
+        //调试
+        console.warn('***********************\n res内容')
+        console.table(res.map(item => item.toJSON()));
+
+        
     });
 };
 
+
+
+
+
 //===========================================================================
+
 /**
  * 元素选择器
  * @param {string} Nid - ID名
- */
+*/
 function $(Nid) {
     return document.getElementById(Nid);
 }
