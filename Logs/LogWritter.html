@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="LogWritter.css">
+    <title>日志</title>
+</head>
+<body>
+    <h1>日志</h1>
+    <div id="input">
+        <input type="text" placeholder="Content"><br>
+        <button onclick="Log()">记录</button>
+    </div>
+    <div id="logs">
+        <div id="-1">
+            <div class="time"></div>
+            <div class="content"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>评论区</title>
+    <style>
+        .comment {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .comment .author {
+            font-weight: bold;
+        }
+        .comment .date {
+            font-style: italic;
+            font-size: 0.8em;
+            color: #888;
+        }
+        .comment .content {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>评论区</h1>
+    <div id="comments"></div>
+    <form id="commentForm">
+        <label for="author">作者:</label>
+        <input type="text" id="author" required><br>
+        <label for="content">内容:</label><br>
+        <textarea id="content" rows="4" cols="50" required></textarea><br>
+        <button type="submit">提交评论</button>
+    </form>
+
+    <script>
+        document.getElementById("commentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            var author = document.getElementById("author").value;
+            var content = document.getElementById("content").value;
+            var date = new Date().toLocaleString();
+            var comment = document.createElement("div");
+            comment.className = "comment";
+            comment.innerHTML = "<div class='author'>" + author + "</div>" +
+                                "<div class='date'>" + date + "</div>" +
+                                "<div class='content'>" + content + "</div>";
+            document.getElementById("comments").appendChild(comment);
+            document.getElementById("commentForm").reset();
+        });
+    </script>
+</body>
+</html> -->
