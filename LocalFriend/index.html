@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!-- Leancloud库 -->
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
+    <title>匹配度计算器</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>匹配度计算器</h2>
+        <input type="text" id="name1" placeholder="你的名字" required>
+        <input type="text" id="name2" placeholder="Ta的名字" required>
+
+        <!-- 像素风格的心形图案 -->
+        <div class="pixel-heart">
+            <br>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <br>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <br>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <br>
+            <br>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <br>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="red"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+            <div class="tra"></div>
+        </div>
+
+        <div id="matchScore">匹配度: <span id="score">0%</span></div>
+        <button onclick="calculateMatch()">计算匹配度</button>
+    </div>
+
+
+
+</body>
+<script src="index.js"></script>
+
+</html>

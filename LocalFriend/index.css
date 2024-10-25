@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f3f4f6;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+input:focus {
+    border-color: #28a745;
+    /* 高亮边框颜色 */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    /* 高亮阴影效果 */
+    outline: none;
+    /* 去掉默认的轮廓 */
+}
+
+
+/* 心形容器 */
+.pixel-heart {
+    display: inline-block;
+    font-size: 0;
+    /* 隐藏文本，使用背景色 */
+    margin: 20px 0;
+    /* 设置上边距和下边距 */
+}
+
+.pixel-heart div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    /* 心形颜色 */
+    margin: 1px;
+    /* 外边距使其有间隔 */
+}
+
+/* 红色像素 */
+.pixel-heart div.red {
+    background-color: red;
+}
+
+/* 透明像素 */
+.pixel-heart div.tra {
+    background-color: transparent;
+}
+
+#matchScore {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}

@@ -2,9 +2,12 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../Yv-Tang.github.io"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "uni"
+		"liveServer.settings.multiRootWorkspaceName": "universe"
 	}
 }
