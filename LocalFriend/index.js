@@ -51,7 +51,7 @@ function GetScore(NameA, NameB) {
             score = object.get("score"); // 假设您在对象中存储了 score
             console.log(`找到了已有数据,score: ${object}`);
             console.log(`取回成功object: ${object.toJSON()}`);
-            $('#score').innerText = score + "%"; // 显示匹配度
+            $('#score').innerText = score + "%(某人已计算)"; // 显示匹配度
 
         } else {
             // 云端不存在数据，计算 score
