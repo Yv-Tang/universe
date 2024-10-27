@@ -1,9 +1,11 @@
 {
 	"folders": [
 		{
+			"name": "universe",
 			"path": "."
 		},
 		{
+			"name": "Yv-Tang.github.io",
 			"path": "../Yv-Tang.github.io"
 		}
 	],
