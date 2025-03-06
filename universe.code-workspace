@@ -10,6 +10,16 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Yv-Tang.github.io"
+		"liveServer.settings.multiRootWorkspaceName": "universe"
+	},
+	"launch": {
+		"configurations": [
+			{
+				"type": "msedge",
+				"name": "http://127.0.0.1:5500/",
+				"request": "launch",
+				"url": "http://127.0.0.1:5500/"
+			}
+		]
 	}
 }

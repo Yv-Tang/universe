@@ -40,7 +40,6 @@ h2 {
     height: 100%;
     border-radius: 10px;
 }
-
 /* 悬浮窗 */
 .content {
     display: none;
@@ -49,11 +48,20 @@ h2 {
     z-index: 1002;
 
     position: fixed;
-    /* 位置及大小 */
-    top: 10%;
-    left: 25%;
-    width: 55%;
-    height: 55%;
+    /* 位置居中 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    /* 宽度固定为窗口宽度的90% */
+    width: 90vw; /* 使用视口宽度单位 */
+    max-width: 90%; /* 确保不超过窗口宽度的90% */
+
+    /* 高度根据内容自适应 */
+    height: auto;
+
+    /* 最小高度 */
+    min-height: 150px; /* 设置最小高度 */
 
     backdrop-filter: blur(10px);
     border-radius: 15px;
