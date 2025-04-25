@@ -4,17 +4,101 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="key.css">
+    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@latest/dist/av-min.js"></script>
     <script src="key.js"></script>
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Rong's Keys</h1>
-    <br>
+    <div id="header">
+        <h1>Rong's Keys</h1>
+        <button id="login" onclick="login()">登录</button>
+    </div>
     <hr>
 
     <div class="members">
+        <script>
+            const { Query, User } = AV;
 
+            AV.init({
+                appId: "kSDqVFRjBHrwXqvwTXN8WM7b-gzGzoHsz",
+                appKey: "mX6hrQ3f4nxt8mSp3B1pp3BO",
+                serverURL: "https://ksdqvfrj.lc-cn-n1-shared.com",
+            });
+
+            function queryAllSiteInfo() {
+                const currentUser = AV.User.current();
+                if (!currentUser) {
+                    alert('请先登录');
+                    return;
+                }
+
+                const query = new AV.Query('SiteInfo');
+                query.find().then(results => {
+                    const membersDiv = document.querySelector('.members');
+                    membersDiv.innerHTML = ''; // 清空现有内容
+
+                    results.forEach(siteInfo => {
+                        const container = document.createElement('div');
+                        container.className = 'container';
+
+                        const logoDiv = document.createElement('div');
+                        logoDiv.id = 'logo';
+                        const logoImg = document.createElement('img');
+                        logoImg.src = siteInfo.get('link') + '/favicon.ico'; // 假设站点链接包含favicon路径
+                        logoImg.alt = siteInfo.get('siteType');
+                        logoDiv.appendChild(logoImg);
+
+                        const dataDiv = document.createElement('div');
+                        dataDiv.id = 'data';
+                        const accountSpan = document.createElement('span');
+                        accountSpan.id = 'account';
+                        accountSpan.textContent = siteInfo.get('account');
+                        const keyDiv = document.createElement('div');
+                        keyDiv.id = 'key';
+                        const copyButton = document.createElement('button');
+                        copyButton.textContent = '复制';
+                        copyButton.onclick = () => {
+                            navigator.clipboard.writeText(siteInfo.get('password')).then(() => {
+                                alert('密码已复制到剪贴板');
+                            }).catch(() => {
+                                alert('复制失败，请手动复制');
+                            });
+                        };
+                        keyDiv.appendChild(copyButton);
+
+                        dataDiv.appendChild(accountSpan);
+                        dataDiv.appendChild(document.createElement('br'));
+                        dataDiv.appendChild(keyDiv);
+
+                        container.appendChild(logoDiv);
+                        container.appendChild(dataDiv);
+                        membersDiv.appendChild(container);
+                    });
+                }).catch(error => {
+                    console.error('查询失败:', error);
+                    alert('查询失败，请稍后再试');
+                });
+            }
+
+            // 页面加载时自动调用查询功能
+            queryAllSiteInfo();
+        </script>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://www.leancloud.cn/favicon.ico" alt="LeanCloud"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">LeanCloud</span><br>
+                <div id="key">
+                    <button onclick="quary('LeanCloud')">查询</button>
+                </div>
+            </div>
+        </div>
         <div class="container">
 
             <!-- 图标 -->
@@ -75,8 +159,173 @@
                     <button onclick="quary('Steam')">查询</button>
                 </div>
             </div>
-
         </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://freshman.uestc.edu.cn/images/logo.png" alt="UESTC"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">2024020903029</span><br>
+                <div id="key">
+                    <button onclick="quary('UESTC')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://static-assets-prod.epicgames.com/epic-store/static/favicon.ico" alt="EPIC"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">EPIC</span><br>
+                <div id="key">
+                    <button onclick="quary('EPIC')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://littleskin.cn/favicon.png" alt="LittleSkin"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">LittleSkin</span><br>
+                <div id="key">
+                    <button onclick="quary('LittleSkin')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="http://www.qidongxia.com/favicon.ico" alt="qidongxia"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">启动侠</span><br>
+                <div id="key">
+                    <button onclick="quary('qidongxia')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://assets.retiehe.com/rth-favicon-256.png" alt="Retiehe"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">热铁盒</span><br>
+                <div id="key">
+                    <button onclick="quary('Retiehe')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://s01.mifile.cn/favicon.ico" alt="Mi"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">Mi</span><br>
+                <div id="key">
+                    <button onclick="quary('Mi')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://steampowered.com/favicon.ico" alt="Steam"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">Steam</span><br>
+                <div id="key">
+                    <button onclick="quary('Steam')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://zhtj.youth.cn/zhtj/static/img/favicon.ico" alt="zhtj"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">智慧团建</span><br>
+                <div id="key">
+                    <button onclick="quary('zhtj')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://t1.chei.com.cn/chsi/favicon.ico" alt="CHSI"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">CHSI</span><br>
+                <div id="key">
+                    <button onclick="quary('CHSI')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="https://assets.zhihuishu.com/icon/favicon.ico" alt="zhihuishu"></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account">智慧树</span><br>
+                <div id="key">
+                    <button onclick="quary('zhihuishu')">查询</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- 图标 -->
+            <div id="logo">
+                <img src="" alt=""></img>
+            </div>
+            <!-- 信息 -->
+            <div id="data">
+                <span id="account"></span><br>
+                <div id="key">
+                    <button onclick="quary('')">查询</button>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

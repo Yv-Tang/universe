@@ -1,0 +1,52 @@
+* {
+    user-select: none; /* 标准语法 */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #ccc;
+    position: relative;
+    width: auto;
+    max-width: 90vw;
+    height: auto;
+    max-height: 90vh;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    transition: width 0.3s ease, height 0.3s ease; /* 添加过渡效果 */
+}
+
+#noButton {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#yesButton {
+    background-color: red;
+    color: #fff;
+    border: 1px solid #fff;
+}

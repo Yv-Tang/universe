@@ -32,6 +32,7 @@ button:active {
 /* 展示框 */
 .members {
     display: flex;
+    flex-wrap: wrap;
 }
 
 /* 卡片 */
